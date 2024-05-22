@@ -1,0 +1,343 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+body{
+    min-width: 400px;
+}
+
+.padre{
+    /* background-color: #124076; */
+    display:flex;
+    flex-flow: column;
+    /* position: relative; */
+}
+
+.header{
+    position: relative;
+}
+
+.menu{
+    /* background-color: #FFC374; */
+    display: grid;
+    grid-template-columns: 1fr 5fr 2fr;
+}
+
+.logo{
+    max-height: 70px;
+    position: relative;
+}
+
+.logo img{
+    /* width: 50%; */
+    margin: -2.3em 0 0 2em;
+    max-height: 9em;
+    position: relative;
+    z-index: -1;    
+}
+
+.panel-sup{
+    display: grid;
+    grid-template-columns: 1fr 3fr 1fr;
+    max-height: 70px;
+    /* display: flex; */
+    /* flex-flow: row; */
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    /* z-index: -1; */
+}
+
+.barrabusqueda{
+    /* border: 1px solid black; */
+    width: 100%;
+    position: relative;
+}
+
+.barrabusqueda input{
+    width: 100%;
+    align-items: center;
+    padding-left: 25px;
+    height: 2em;
+    background-color: rgba(195, 87, 15, 0.5);
+    border-radius: 5px;
+}
+
+.barrabusqueda img{
+    position: absolute;
+    top: 25%;
+    left: 0.5em;
+    cursor:text;
+}
+
+.navegador{
+    display: flex;
+    flex-flow: row wrap;
+    background-color: black;
+    padding: 10px;
+    justify-content: space-around;
+    /* z-index: 2;     */
+}
+
+.navegador li{
+    list-style-type: none;
+    margin: 0 2em;
+    font-size: 0.9em;
+}
+
+.navegador a{
+    /* background-color: #F9E897; */
+    /* text-align: center; */
+    /* position: inline-blok; */
+    /* margin: 0 15px; */
+    color: whitesmoke;
+    text-decoration: none;
+    padding: 0 0.2em;
+}
+
+.usuario{
+    margin-right: 1em;
+}
+
+/* div a{
+    color: black;
+    text-decoration: none;
+    margin: 0 10px;
+} */
+
+.navegador a:hover{
+    color: #c3570f;
+    background-color: #d1cdcb;
+    padding: 0.2em 0.2em;
+    border-radius: 5px;
+}
+
+.carrito{
+    /* background-color: #F9E897; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* margin-right: 15px; */
+}
+
+.section {
+    /* background-color: #7F9F80; */
+    
+        
+}
+.productos{
+    background-color: #FFC374;
+    display: grid;
+    grid-template-columns: 33% 33% 33%;
+}
+.producto{
+    background-color: #F9E897;
+    display: grid;
+    align-items: center;
+    text-align: center
+
+    
+
+}
+
+.texto-principal{
+    text-align: center;
+
+}
+
+.texto-secundario{
+    text-align: center;
+    
+}
+
+/* Contenedor del Carousel y de los Puntos */
+.contenedor{
+    width: 100%;
+    /* background-color: rgb(214, 240, 98); */
+    overflow: hidden;
+    position: relative;
+}
+
+/* Contenedor de las imágenes y los botones flechas */
+.carousel{
+    position: relative;
+    margin:auto;
+}
+
+/* Oculta las imágenes */
+.oculta{
+    display: none;
+}
+
+/* Botones Anterior y Siguinte */
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    margin-top: -22px;
+    padding: 16px;
+    color: white;
+    font-weight: bold;
+    font-size: 28px;
+    transition: background-color 1s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+  }
+
+/* Position the "next button" to the right */
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+  }
+  
+  /* On hover, add a black background color with a little bit see-through */
+  .prev:hover, .next:hover {
+    /* background-color: rgba(0,0,0,0.8); */
+    /* background-color: #c3570f; */
+    background-color: rgba(252, 88, 33, 0.6);
+  }
+
+.punto {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 1.5s ease;
+}
+  
+.active, .punto:hover {
+    background-color: #717171;
+}
+
+.aparece {
+    animation-name: aparece;
+    animation-duration: 3s;
+}
+  
+@keyframes aparece {
+    from {opacity: .4}
+    to {opacity: 1}
+}
+
+.puntos{
+    position: absolute;
+    bottom: 0;
+    left: 46%;
+}
+
+.carousel img{
+    display: block;
+    width: 100%;
+    margin: auto;
+}
+
+.botones{
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: rgba(242, 157, 73, 0.7);
+    top: 50%;
+    transform: translateY(-50%);
+    text-align: center;
+    font-size: 2.5em;
+    /* font-weight: bold; */
+    font-family: monospace;
+    cursor: pointer;
+}
+
+.izquierdo{
+    left:10px;
+}
+
+.derecho{
+    right: 10px;
+}
+
+.botones:hover{
+    background-color: rgba(235, 227, 227, 0.7);
+}
+
+.footer {
+    /* background-color: #7F9F80; */
+    text-align: center;
+    /* background-color: rgb(244, 135, 63) */
+    background-color: rgba(252, 88, 33, 1);
+    /* position: sticky; */
+    padding: 3px 10px;
+}
+
+.footer h5{
+    border-bottom: 1px solid black;
+    padding-bottom: 5px;
+}
+
+.pie img:hover{
+    width: 1.5em;
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 50%;
+}
+
+.imagen{
+    margin-top: 5px;
+}
+
+/* clase agregada por Fabiana para el formulario - falta terminar, está incompleto*/
+/* ***********************formulario***************************************** */
+.contenedorFormulario {
+    /* width: 100%; */
+    /* padding: 0% 10% 0% 20%; */
+    grid-gap: 1px;
+    /* justify-items: center; */
+    align-items: center;
+    display: grid;
+    grid-template-columns: 100%;
+    /* ******************************* */
+    margin: 1% 10% 3%;
+    width: 80%;
+    background-color: rgb(228, 162, 116);
+    /* border: #124076 15px ; */
+    padding: 2% 5% 1%;
+    border-radius: 15px ;
+    box-shadow: #3d3303 10px 10px 20px;
+}
+
+.divItem{
+    display: grid;
+    grid-template-columns: 30% 70%;
+    margin-top: 2%;
+}
+.divItem2{
+    display: grid;
+    grid-template-columns: 100%;
+    margin-top: 2%;
+}
+
+.divBotones {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-items: center;
+    padding: 20px;
+    margin: 2%;
+    /* align-items: center; */
+    padding: 5px;
+}
+.textarea{
+    width: 80%;
+    margin-left: 10%;
+}
+.pFormulario{
+    font-style: italic;
+    color: crimson;
+}
+.margen{
+    margin-left: 5%;
+
+}
